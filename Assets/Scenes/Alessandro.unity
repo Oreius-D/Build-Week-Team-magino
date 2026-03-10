@@ -255,7 +255,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &638459585
 GameObject:
@@ -289,6 +289,7 @@ MonoBehaviour:
   player: {fileID: 320576747}
   lengthSection: 20
   sectionOnScreen: 1
+  maxDistance: 100
 --- !u!4 &638459587
 Transform:
   m_ObjectHideFlags: 0
@@ -544,9 +545,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sectionsMap:
-  - {fileID: 2626870961374275628, guid: caeebdd5acfcb4649bc1d8f08e9484d3, type: 3}
-  - {fileID: 8714816005335297446, guid: ab9951e2288be874a94505cf2c4873d3, type: 3}
-  - {fileID: 2668938636542604991, guid: fc7a8498fdcafb7419f05243ceebf775, type: 3}
+  - {fileID: 1130465403236556522, guid: 16368346c38baa04ab684e0068a90ab3, type: 3}
+  - {fileID: 7807701704346859508, guid: 1a76b42ac69c44f4e9d26d0e44c8a582, type: 3}
+  - {fileID: 7863083170501248441, guid: 5e6856ac5678cae43a4d5aca064eb599, type: 3}
+  numPrefabPerSection: 3
 --- !u!4 &1789185292
 Transform:
   m_ObjectHideFlags: 0

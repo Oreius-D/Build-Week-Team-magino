@@ -8,7 +8,7 @@ public class ReturnToPool : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            MapGenerator.Instance.ReturnToPool(gameObject);
+            MapGenerator.Instance.ReturnToPool(transform.parent.gameObject);
         }
     }
 }

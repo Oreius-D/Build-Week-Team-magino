@@ -10,7 +10,7 @@ public class MapGenerator : Singleton<MapGenerator>
     private List<GameObject> pool = new List<GameObject>();
     public List<GameObject> Pool {get =>pool;}
 
-    private void Awake()
+    protected override void Awake()
     {
         CreateObject();
     }
@@ -32,6 +32,7 @@ public class MapGenerator : Singleton<MapGenerator>
         {
             Debug.LogError("non esiste niente nella pool");
             var emergecyObj = Instantiate(sectionsMap[0],transform);
+
             return emergecyObj;
         }
 

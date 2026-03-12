@@ -5,8 +5,10 @@ using UnityEngine;
 public class SpawnMap : MonoBehaviour
 {
     [SerializeField] private Transform player;
+
     [SerializeField] private float lengthSection=20f;
     [SerializeField] private int sectionOnScreen=2;
+
     [SerializeField] private float maxDistance;
 
     private float spawnZ;

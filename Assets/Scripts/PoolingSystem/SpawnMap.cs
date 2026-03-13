@@ -49,7 +49,7 @@ public class SpawnMap : MonoBehaviour
         }
 
         spawnZ = 0;
-        player.position = new Vector3(player.position.x, player.position.y, 0);
+        player.position = new Vector3(player.position.x, player.position.y, spawnZ);
 
         for (int i = 0; i < sectionOnScreen; i++)
         {

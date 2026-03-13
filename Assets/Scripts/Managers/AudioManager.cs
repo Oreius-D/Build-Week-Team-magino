@@ -2,12 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : Singleton<AudioManager>
 {
     private AudioSource audioSource;
-    [SerializeField] private SoundData[] audioClipsInspector;
+    [SerializeField] public SoundData[] audioClipsInspector;
     private Dictionary<SoundID, AudioClip[]> audioDatabase;
 
     protected override void Awake()
@@ -15,6 +14,7 @@ public class AudioManager : Singleton<AudioManager>
         base.Awake();
         audioSource = GetComponent<AudioSource>();
         audioDatabase= audioClipsInspector.ToDictionary(data=> data.SoundID, data=> data.Clips);
+       
     }
 
     public void PlayMusic(SoundID id)

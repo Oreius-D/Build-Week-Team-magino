@@ -12,13 +12,13 @@ public class MapGenerator : Singleton<MapGenerator>
 
     protected override void Awake()
     {
-        CreateObject();
+        CreateObject(numPrefabPerSection);
     }
-    public void CreateObject()
+    public void CreateObject(int numPrefab)
     {
-        foreach (GameObject section in sectionsMap)
+        for (int i=0;i<numPrefab; i++)
         {
-            for (int i=0; i<numPrefabPerSection; i++)
+            foreach(GameObject section in sectionsMap)
             {
                 var obj = Instantiate(section, transform);
                 obj.SetActive(false);
@@ -30,10 +30,7 @@ public class MapGenerator : Singleton<MapGenerator>
     {
         if (pool.Count == 0)
         {
-            Debug.LogError("non esiste niente nella pool");
-            var emergecyObj = Instantiate(sectionsMap[0],transform);
-
-            return emergecyObj;
+            CreateObject(1);
         }
 
         int randomIndex = Random.Range(0, pool.Count);

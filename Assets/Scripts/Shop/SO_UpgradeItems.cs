@@ -6,17 +6,17 @@ using UnityEngine;
 public abstract class SO_UpgradeItems : ScriptableObject
 {
     //Nome del potenziamento
-    [SerializeField] private string _nameUpgrade;
+    [SerializeField] private string nameUpgrade;
 
-    [SerializeField] private int _cost;
-    [SerializeField] private bool _isUnlocked;
+    [SerializeField] private int cost;
+    [SerializeField] private bool isUnlocked;
     //[SerializeField] private bool _isConsumable;
 
-    public int Cost => _cost;
+    public int Cost => cost;
     public bool IsUnlocked
     {
-        get => _isUnlocked;
-        set => _isUnlocked = value;
+        get => isUnlocked;
+        set => isUnlocked = value;
     }
     //public bool IsConsumable
     //{

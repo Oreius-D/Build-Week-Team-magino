@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    public int _coins;
+    public int coins;
 }

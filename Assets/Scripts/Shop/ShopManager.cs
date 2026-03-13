@@ -6,19 +6,19 @@ using UnityEngine.Playables;
 public class ShopManager : MonoBehaviour
 {
     //Lista dei Scriptable Objects
-    [SerializeField] private List<SO_ConsumableUpgrade> _shopConsumable;
-    [SerializeField] private List<SO_PassiveUpgrade> _shopPassice;
+    [SerializeField] private List<SO_ConsumableUpgrade> shopConsumable;
+    [SerializeField] private List<SO_PassiveUpgrade> shopPassice;
     //Bottone dell'acquisto
-    [SerializeField] private GameObject _buyButton;
+    [SerializeField] private GameObject buyButton;
     //Dove ho salvato le monete, per il momento.Poi se è da cambiare vediamo
-    [SerializeField] private GameData _data;
+    [SerializeField] private GameData data;
 
 
 
     //Funzione per acquistare
     public void BuyUpgrade(SO_UpgradeItems items)
     {
-        if (_data != null && _data._coins < items.Cost)
+        if (data != null && data.coins < items.Cost)
         {
             Debug.Log($"Soldi insufficenti");
             return;
@@ -31,10 +31,10 @@ public class ShopManager : MonoBehaviour
                 return;
             }
             
-            _data._coins -= passive.Cost;
+            data.coins -= passive.Cost;
             passive.IsUnlocked = true;
             InventoryManager.Instance.AddPassive(passive);
-            _buyButton.SetActive(false);
+            buyButton.SetActive(false);
             Debug.Log("Upgrade passivo acquistato");
             
         }
@@ -45,7 +45,7 @@ public class ShopManager : MonoBehaviour
                 Debug.Log($"Inventario pieno");
                 return;
             }
-            _data._coins -= consumable.Cost;
+            data.coins -= consumable.Cost;
             InventoryManager.Instance.AddConsumable(consumable);
             Debug.Log($"Consumabile aggiunto");
         }

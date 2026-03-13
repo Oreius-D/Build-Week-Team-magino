@@ -12,7 +12,7 @@ public class InventoryManager : Singleton<InventoryManager>
         if (!_passives.Contains(upgrade))
         {
             _passives.Add(upgrade);
-            Debug.Log($"[Inventory] {upgrade.name} aggiunto allo zaino");
+            Debug.Log($"[Inventario] {upgrade.name} aggiunto allo zaino");
         }
     }
 
@@ -22,11 +22,11 @@ public class InventoryManager : Singleton<InventoryManager>
         if (_consumables.Count < _maxConsumables)
         {
             _consumables.Add(upgrade);
-            Debug.Log($"[Inventory] {upgrade.name} aggiunto. Spazio : {_consumables.Count}/{_maxConsumables}");
+            Debug.Log($"[Inventario] {upgrade.name} aggiunto. Spazio : {_consumables.Count}/{_maxConsumables}");
         }
         else
         {
-            Debug.Log($"[Inventory] Inventario pieno");
+            Debug.Log($"[Inventario] Inventario pieno");
         }
     }
 

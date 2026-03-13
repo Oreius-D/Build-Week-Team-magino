@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nameUpgrade: Passivo
   _cost: 50
-  _isUnlocked: 1
+  _isUnlocked: 0

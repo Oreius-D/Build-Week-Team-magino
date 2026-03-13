@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Street Variant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5139455725839380731, guid: 16368346c38baa04ab684e0068a90ab3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.095
+      objectReference: {fileID: 0}
     - target: {fileID: 7419522474372999167, guid: 16368346c38baa04ab684e0068a90ab3,
         type: 3}
       propertyPath: m_LocalPosition.x

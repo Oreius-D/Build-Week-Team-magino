@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     private float originalHeight;
     private Vector3 originalCenter;
 
+    // Flag per il fast fall (caduta rapida): attivo quando il giocatore preme giù in aria, aumenta la gravità
+    private bool fastFalling;
+
     // Dipendenze da altri componenti (salute, inventario)
     private PlayerHealth health;
     private IPlayerInventory inventory;
@@ -40,9 +43,13 @@ public class PlayerController : MonoBehaviour
     {
         cc = GetComponent<CharacterController>(); // Assicurato da RequireComponent
         health = GetComponent<PlayerHealth>();
-        
-        //ToDo: Gestire l'invetario
 
+        //Prendere l'invetario
+        inventory = GetComponent<InventoryLink>()?.Inventory;
+        if (inventory == null)
+            Debug.LogWarning("Inventory non trovato: double jump/shield/consumabili disattivi", this);
+
+        health.ResetHealth();
 
         // Salva altezza e centro originali per poterli ripristinare dopo lo slide
         originalHeight = cc.height;
@@ -86,6 +93,17 @@ public class PlayerController : MonoBehaviour
             if (verticalVel < 0f) verticalVel = config.groundedStickingForce;
             hasDoubleJumped = false;
         }
+
+        //Gestione gravità e fast fall (caduta rapida)
+        float g = config.gravity;
+        if (!cc.isGrounded && fastFalling && verticalVel > config.gravity) // sei in aria
+            g *= config.fastFallMultiplier;
+
+        verticalVel += g * Time.deltaTime;
+
+        // clamp (opzionale)
+        verticalVel = Mathf.Max(verticalVel, -config.maxFallSpeed);
+
         verticalVel += config.gravity * Time.deltaTime;
         move += Vector3.up * verticalVel;
 
@@ -124,7 +142,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        //ToDo: Doppio salto con inventario esterno
+        // Secondo salto: solo se passivo attivo e non ancora usato
+        bool canDoubleJump = inventory != null && inventory.HasPassive(PassiveType.DoubleJump);
+        if (canDoubleJump && !hasDoubleJumped)
+        {
+            hasDoubleJumped = true;
+
+            verticalVel = Mathf.Sqrt(config.jumpForce * -2f * config.gravity);
+        }
 
     }
 
@@ -151,5 +176,11 @@ public class PlayerController : MonoBehaviour
         isSliding = false;
         cc.height = originalHeight;
         cc.center = originalCenter;
+    }
+
+    //Metodo che attiva il fast fall (caduta rapida) quando il giocatore preme giù in aria, aumentando la gravità
+    public void FastFall(bool active)
+    {
+        fastFalling = active;
     }
 }

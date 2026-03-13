@@ -26,4 +26,9 @@ public class PlayerConfig : ScriptableObject
     //Gestione invulnerabilità dopo un colpo subito
     [Header("Invulnerability")]
     public float invulnerabilityDuration = 2f; // Durata dell'invulnerabilità in secondi
+
+    //Gravita per discesa rapida (fast fall)
+    [Header("Fast Fall")]
+    public float fastFallMultiplier = 2.5f;  // quanto aumenta la gravità quando premi giù in aria
+    public float maxFallSpeed = 35f;         // clamp velocità caduta
 }

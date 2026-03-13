@@ -63,13 +63,24 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c6abe4d89d937914195ccff2007a9de5, type: 2}
+    - target: {fileID: 2646353920351672805, guid: 1a76b42ac69c44f4e9d26d0e44c8a582,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646353920351672805, guid: 1a76b42ac69c44f4e9d26d0e44c8a582,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.307
+      objectReference: {fileID: 0}
     - target: {fileID: 7807701704346859508, guid: 1a76b42ac69c44f4e9d26d0e44c8a582,
         type: 3}
       propertyPath: m_Name
       value: Street Variant 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8348003559931860685, guid: 1a76b42ac69c44f4e9d26d0e44c8a582, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a76b42ac69c44f4e9d26d0e44c8a582, type: 3}

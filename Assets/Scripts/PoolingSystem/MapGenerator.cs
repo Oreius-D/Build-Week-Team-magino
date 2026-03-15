@@ -12,6 +12,7 @@ public class MapGenerator : Singleton<MapGenerator>
 
     protected override void Awake()
     {
+        base.Awake();
         CreateObject(numPrefabPerSection);
     }
     public void CreateObject(int numPrefab)

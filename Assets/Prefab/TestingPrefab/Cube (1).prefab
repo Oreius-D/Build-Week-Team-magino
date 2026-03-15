@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4659534645693443334}
   - component: {fileID: 6888808559955874098}
-  - component: {fileID: 756929045314124927}
+  - component: {fileID: 4094774156044082819}
   m_Layer: 0
   m_Name: DestroyCollider
   m_TagString: Untagged
@@ -52,9 +52,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 1, z: 0.6}
---- !u!114 &756929045314124927
+  m_Size: {x: 1, y: 6, z: 0.2}
+  m_Center: {x: 0, y: 2, z: 0.6}
+--- !u!114 &4094774156044082819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,9 +63,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1751057246572390618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b3ce7064aece748acbe791a401f359, type: 3}
+  m_Script: {fileID: 11500000, guid: 2139e0fdf2931604b9acd91c55f912ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolFrom: {fileID: 11400000, guid: 53a2e8b8ad7dba94787382eeefb64700, type: 2}
 --- !u!1 &4175372401531876567
 GameObject:
   m_ObjectHideFlags: 0

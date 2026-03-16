@@ -48,7 +48,8 @@ public class MapSpawnar : MonoBehaviour
     {
         foreach (Transform child in Pool.Instance.transform)
         {
-            if (child.gameObject.activeInHierarchy)
+            Segment segment = child.GetComponent<Segment>();
+            if (segment!=null&& child.gameObject.activeInHierarchy)
             {
                 Pool.Instance.ReturnToPool(segments.Id, child.gameObject);
             }

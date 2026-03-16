@@ -879,7 +879,7 @@ MonoBehaviour:
   coin: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
   lengthSection: 20
   sectionOnScreen: 2
-  maxDistance: 300
+  maxDistance: 50
 --- !u!4 &2079321309
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ using UnityEngine;
 public class PoolSettings : ScriptableObject
 {
     public PoolId Id;
-    public int DefaultSize;
-    public int MaxSize;
-    public GameObject prefab;
+    public int numPerPrefab;
+    public GameObject[] Prefabs;
 }

@@ -5,9 +5,15 @@ using UnityEngine;
 public class PooledObject : MonoBehaviour
 {
     [SerializeField] PoolSettings poolFrom;
-    private float timer;
-    private float interval=5f;
+    [SerializeField] float despawnDistance = 30f;
 
+    void Update()
+    {
+        if (transform.position.z < Pool.Instance.Player.position.z - despawnDistance)
+        {
+            Pool.Instance.ReturnToPool(PoolId.Coin, gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

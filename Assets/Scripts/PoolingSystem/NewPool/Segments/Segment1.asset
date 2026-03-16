@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bb913f3c90a8b340acc91a326dc2386, type: 3}
-  m_Name: New Pool Settings
+  m_Name: Segment1
   m_EditorClassIdentifier: 
   Id: 0
-  DefaultSize: 10
-  MaxSize: 50
-  prefab: {fileID: 4175372401531876567, guid: 4e3caba45a9b257468dd5b171c811a08, type: 3}
+  numPerPrefab: 5
+  Prefabs:
+  - {fileID: 1130465403236556522, guid: 16368346c38baa04ab684e0068a90ab3, type: 3}
+  - {fileID: 7807701704346859508, guid: 1a76b42ac69c44f4e9d26d0e44c8a582, type: 3}

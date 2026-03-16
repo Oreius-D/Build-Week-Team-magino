@@ -7,9 +7,9 @@ public abstract class SO_UpgradeItems : ScriptableObject
 {
     //Nome del potenziamento
     [SerializeField] private string nameUpgrade;
-    [SerializeField] private string id;
+    private string id;
     [SerializeField] private int cost;
-    [SerializeField] private bool isUnlocked;
+    private bool isUnlocked;
     //[SerializeField] private bool _isConsumable;
     public string NameUpgrade
     {

@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class InventoryManager : Singleton<InventoryManager>
 {
+    private int coins;
+    public int Coins
+    { get => coins; set => coins = value;}
     [SerializeField] private List<SO_PassiveUpgrade> _passives = new List<SO_PassiveUpgrade>();
     [SerializeField] private List<SO_ConsumableUpgrade> _consumables = new List<SO_ConsumableUpgrade>();
     private int _maxConsumables = 3;
+    //public SaveData saveData;
     public void AddPassive(SO_PassiveUpgrade upgrade)
     {
         if (!_passives.Contains(upgrade))
         {
+            //saveData.Add
             _passives.Add(upgrade);
             Debug.Log($"[Inventario] {upgrade.name} aggiunto allo zaino");
         }
@@ -21,6 +26,7 @@ public class InventoryManager : Singleton<InventoryManager>
         
         if (_consumables.Count < _maxConsumables)
         {
+            //saveData.Add
             _consumables.Add(upgrade);
             Debug.Log($"[Inventario] {upgrade.name} aggiunto. Spazio : {_consumables.Count}/{_maxConsumables}");
         }

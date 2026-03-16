@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SO_CoinData : MonoBehaviour
+[CreateAssetMenu(menuName = "Coin Data")]
+public class SO_CoinData : ScriptableObject
 {
     [SerializeField] private int value;
     [SerializeField] private SoundID soundId;

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3006382573369297146}
   - component: {fileID: 9184921375347568146}
   - component: {fileID: 6099053126579994423}
+  - component: {fileID: 2373372382543784546}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -218,3 +219,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinData: {fileID: 11400000, guid: 873953375cc1d544a97feef7e4f5e4f1, type: 2}
+--- !u!114 &2373372382543784546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705169102460713847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2139e0fdf2931604b9acd91c55f912ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolFrom: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
+  despawnDistance: 30

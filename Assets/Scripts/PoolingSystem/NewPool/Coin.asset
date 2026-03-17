@@ -15,4 +15,4 @@ MonoBehaviour:
   Id: 2
   numPerPrefab: 20
   Prefabs:
-  - {fileID: 4372748293225610405, guid: a5a5e963088617648897f3e1a7dd533d, type: 3}
+  - {fileID: 2394840802280947119, guid: 589b73c3e6859bd4883b747a7c80072f, type: 3}

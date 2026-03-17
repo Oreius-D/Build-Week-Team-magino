@@ -4,6 +4,7 @@ public class PlayerInput : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private PlayerController controller; // Riferimento al PlayerController, da assegnare in inspector o trovato in Awake
+    private PlayerAnimator playerAnimator;
 
     [Header("Keyboard Bindings")]
     [SerializeField] private KeyCode moveLeft = KeyCode.A;
@@ -23,12 +24,17 @@ public class PlayerInput : MonoBehaviour
         if (controller == null)
             controller = GetComponent<PlayerController>();
 
+        playerAnimator = GetComponentInChildren<PlayerAnimator>();
+
         // Inventario esterno tramite InventoryLink (o adapter)
         inventory = controller != null ? controller.GetComponent<InventoryLink>()?.Inventory : null;
         if (inventory == null)
             inventory = GetComponent<InventoryLink>()?.Inventory; // fallback se PlayerInput è sullo stesso GO del link
     }
-
+    private void Start()
+    {
+        playerAnimator.Run();
+    }
     private void Update()
     {
         if (controller == null) return;
@@ -44,11 +50,17 @@ public class PlayerInput : MonoBehaviour
         // --- Jump (includes Double Jump) ---
         // Il doppio salto non è un input separato: è il Controller che lo concede se l'inventario ha il passivo.
         if (Input.GetKeyDown(jump) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        {
             controller.Jump();
+            playerAnimator.Jump();
+        }
 
         // --- Slide ---
         if (Input.GetKeyDown(slide) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
             controller.Slide();
+            playerAnimator.Slide();
+        }
 
         // --- Consumables 1-3 ---
         if (Input.GetKeyDown(consumable1)) inventory?.TryUseConsumable(0);

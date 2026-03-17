@@ -34,9 +34,9 @@ public class Pool : Singleton<Pool>
     {
         if (pools.TryGetValue(id, out List<GameObject> list))
         {
-            Debug.Log(list.Count + "lista");
+            //Debug.Log(list.Count + "lista");
             int index = Random.Range(0, list.Count);
-            Debug.Log(index + "index");
+            //Debug.Log(index + "index");
             var obj = list[index];
             obj.SetActive(true);
             list.RemoveAt(index);
@@ -48,7 +48,7 @@ public class Pool : Singleton<Pool>
     {
         if (pools.TryGetValue(id, out List<GameObject> list))
         {
-            Debug.Log("sono stata richiamata ReturnToPool");
+            //Debug.Log("sono stata richiamata ReturnToPool");
             obj.SetActive(false);
             list.Add(obj);
         }

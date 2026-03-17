@@ -16,6 +16,11 @@ public class PlayerHealth : MonoBehaviour
     public bool IsInvulnerable => Time.time < invulnUntil;
     // Il giocatore è invulnerabile se il tempo attuale è inferiore al timestamp di invulnerabilità
 
+    private PlayerAnimator playerAnimator;
+    private void Awake()
+    {
+        playerAnimator=GetComponentInChildren<PlayerAnimator>();
+    }
     // Inizializza la salute del giocatore all'inizio del gioco
     public void ResetHealth()
     {
@@ -43,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
 
         // Notifica gli ascoltatori del nuovo numero di hit rimanenti
         OnHit?.Invoke(hitsLeft);
+        playerAnimator.Hit();
 
         // Imposta il tempo di invulnerabilità dopo aver subito un hit
         invulnUntil = Time.time + Mathf.Max(0f, invulnDuration);
@@ -54,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
         if (hitsLeft <= (int)Costants.Dead)
         {
             IsDead = true;
+            playerAnimator.Death();
             Debug.Log("Player died");
             OnDied?.Invoke();
         }

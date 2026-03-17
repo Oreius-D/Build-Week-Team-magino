@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class PooledObject : MonoBehaviour
 {
-    [SerializeField] PoolSettings poolFrom;
-    [SerializeField] float despawnDistance = 30f;
+    [SerializeField] private PoolSettings poolFrom;
+    [SerializeField] float despawnDistance = 10f;
+
+    public PoolSettings PoolFrom { get => poolFrom; }
 
     void Update()
     {
         if (transform.position.z < Pool.Instance.Player.position.z - despawnDistance)
         {
-            Pool.Instance.ReturnToPool(PoolId.Coin, gameObject);
+            ResetPoolObject();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Pool.Instance.ReturnToPool(poolFrom.Id,transform.parent.gameObject);
+            ResetPoolObject();
         }
+    }
+    private void ResetPoolObject()
+    {
+        Pool.Instance.ReturnToPool(poolFrom.Id,gameObject);
     }
 }

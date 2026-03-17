@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bb913f3c90a8b340acc91a326dc2386, type: 3}
-  m_Name: Segment1
+  m_Name: TestMap
   m_EditorClassIdentifier: 
   Id: 0
   numPerPrefab: 5
   Prefabs:
-  - {fileID: 1130465403236556522, guid: 16368346c38baa04ab684e0068a90ab3, type: 3}
-  - {fileID: 7807701704346859508, guid: 1a76b42ac69c44f4e9d26d0e44c8a582, type: 3}
+  - {fileID: 5307547921801167297, guid: e4df482812aec7e4cab52cbf59b5861f, type: 3}
+  - {fileID: 8395194039275053462, guid: 1a76b42ac69c44f4e9d26d0e44c8a582, type: 3}
+  - {fileID: 5360574628681765128, guid: 5e6856ac5678cae43a4d5aca064eb599, type: 3}
+  - {fileID: 6441952424808832171, guid: bd5b1d89e09d49244b0861a00a6cdf1b, type: 3}

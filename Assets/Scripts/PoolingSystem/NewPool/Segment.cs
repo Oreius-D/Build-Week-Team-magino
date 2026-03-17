@@ -9,7 +9,6 @@ public class Segment : MonoBehaviour
     [SerializeField] private float offsetCoin=2f;
     public void SpawnCoin()
     {
-        Debug.Log(lanePoints.position);
         Vector3 offset = Vector3.forward*offsetCoin;
         for (int i = 0; i < numCoins; i++)
         {

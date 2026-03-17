@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9883f4a3d6d3754288943891e86099a, type: 3}
+  m_Name: PlayerConfig1
+  m_EditorClassIdentifier: 
+  forwardSpeed: 2
+  laneChangeSpeed: 10
+  laneOffset: 2
+  jumpForce: 10
+  gravity: -9.81
+  groundedStickingForce: -5
+  slideDuration: 1
+  slideHeightMultiplier: 0.5
+  slideCenterYMultiplier: 1.2
+  invulnerabilityDuration: 2
+  fastFallMultiplier: 2.5
+  maxFallSpeed: 35

@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PassiveUpgrade",menuName = "PassiveUpgrade")]
 public class SO_PassiveUpgrade : SO_UpgradeItems 
 {
-    
+    public PassiveType type;
 }

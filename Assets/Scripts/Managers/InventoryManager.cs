@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 
-public class InventoryManager : Singleton<InventoryManager>
+public class InventoryManager : Singleton<InventoryManager> 
 {
     //private int coins;
     //public int Coins
     //{ get => coins; set => coins = value;}
+    public int coins;
+   
+
     private int _maxConsumables = 3;
     public SaveData saveData = new SaveData();
     public void AddPassive(SO_PassiveUpgrade upgrade)

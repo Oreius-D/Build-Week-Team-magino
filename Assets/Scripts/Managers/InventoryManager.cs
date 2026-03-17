@@ -55,8 +55,8 @@ public class InventoryManager : Singleton<InventoryManager>
     {
         if (saveData != null && saveData.ConsumableID.Contains(upgrade))
         {
-            Debug.Log($"{upgrade.name} e stato utilizzato. Spazio : {_maxConsumables - _consumables.Count}");
-            _consumables.Remove(upgrade);
+            Debug.Log($"{upgrade.name} e stato utilizzato. Spazio : {_maxConsumables - saveData.ConsumableID.Count}");
+            saveData.ConsumableID.Remove(upgrade);
             upgrade.IsUnlocked = false;
         }
         

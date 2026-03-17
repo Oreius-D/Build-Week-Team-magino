@@ -5,78 +5,86 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
-    private string path = Application.persistentDataPath + "/SaveGame.json";
-    [SerializeField] private List<SO_PassiveUpgrade> passiveList;
-    [SerializeField] private List<SO_ConsumableUpgrade> consumableList;
-    [SerializeField] private SaveData currentSave = new SaveData();
+    private string path;
+    private List<SO_PassiveUpgrade> passiveList;
+    private List<SO_ConsumableUpgrade> consumableList;
+    //private SaveData currentSave = new SaveData();
+    private void Start()
+    {
+        path = Application.persistentDataPath + "/SaveGame.json";
+    }
     public void SaveGame()
     {
-        currentSave.PassiveID.Clear();
-        currentSave.ConsumableID.Clear();
-        currentSave.Banana = InventoryManager.Instance.Coins;
-        //Ciclo le passive in gioco
-        foreach (var passive in passiveList)
-        {
-            if (passive.IsUnlocked)//Se la passiva è TRUE
-            {
-                currentSave.PassiveID.Add(passive.ID);//Aggiungo ID
-            }
-        }
-        //Ciclo i consumabili ingioco
-        foreach (var consumable in consumableList)
-        {
-            currentSave.ConsumableID.Add(consumable.ID);//Aggiungo ID
-        }
+        SaveData currentSave = InventoryManager.Instance.saveData;
+        //Inventoiry.Inastance.SaveData
+        //currentSave.PassiveID.Clear();
+        //currentSave.ConsumableID.Clear();
+        //currentSave.Banana = InventoryManager.Instance.saveData.Banana;
+        ////Ciclo le passive in gioco
+        //foreach (var passive in passiveList)
+        //{
+        //    if (passive.IsUnlocked)//Se la passiva è TRUE
+        //    {
+        //        currentSave.PassiveID.Add(passive.ID);//Aggiungo ID
+        //    }
+        //}
+        ////Ciclo i consumabili ingioco
+        //foreach (var consumable in consumableList)
+        //{
+        //    currentSave.ConsumableID.Add(consumable.ID);//Aggiungo ID
+        //}
         //Converto sataSaving in json
+        Debug.Log(currentSave);
         string json = JsonUtility.ToJson(currentSave , true);//Da FARE = dataSaving dell' invenatrio
         //Scrivo il file nella memoria
         File.WriteAllText(Application.persistentDataPath + "/SaveGame.json",json);
         Debug.Log($"Gioco salvato");
+        
     }
     public void Load()
     {
-       
+        
         //Se non esiste non facciamo nulla(Tipo se e la prima volta che si gioca)
         if (!File.Exists(path)) return;
         //Leggo il testo nel Path
         string json = File.ReadAllText(path);
         //Converto il testo in un oggetto
-        currentSave = JsonUtility.FromJson<SaveData>(json);
-        InventoryManager.Instance.Coins = currentSave.Banana;
+        SaveData saveLoad = JsonUtility.FromJson<SaveData>(json);
+        InventoryManager.Instance.saveData = saveLoad;
         //Qua ciclo tutti le passive che abbiamo nel salvataggio
-        foreach (string passive in currentSave.PassiveID)
-        {
-            //per ogni passiva,cerco nella lista di tutte le passive del negozio quella uguale
-            foreach (SO_PassiveUpgrade passiveUpgrade in passiveList )
-            {
-                if (passiveUpgrade.ID == passive)
-                {
-                    //se trovata  la sblocco e la metto nell'inventario
-                    passiveUpgrade.IsUnlocked = true;
-                    InventoryManager.Instance.AddPassive(passiveUpgrade);
-                    break;//Esco perche l'ho trovata
-                }
-            }
-        }
-        //ciclo per i consumabili
-        foreach (string consumable in currentSave.ConsumableID)
-        {
-            //Se l'inventario è pieno non aggiungo nulla
-            if (!InventoryManager.Instance.CanAdd())
-            {
-                break;
-            }
-            //Cerco oggetto corrispondete a "consumable"
-            foreach (SO_ConsumableUpgrade consumableUpgrade in  consumableList )
-            {
-                if (consumableUpgrade.ID == consumable)
-                {
-                    //Se trovato lo aggiungo
-                    InventoryManager.Instance.AddConsumable(consumableUpgrade);
-                    break;
-                }
-            }
-        }
+        //foreach (string passive in currentSave.PassiveID)
+        //{
+        //    //per ogni passiva,cerco nella lista di tutte le passive del negozio quella uguale
+        //    foreach (SO_PassiveUpgrade passiveUpgrade in passiveList )
+        //    {
+        //        if (passiveUpgrade.ID == passive)
+        //        {
+        //            //se trovata  la sblocco e la metto nell'inventario
+        //            passiveUpgrade.IsUnlocked = true;
+        //            InventoryManager.Instance.AddPassive(passiveUpgrade);
+        //            break;//Esco perche l'ho trovata
+        //        }
+        //    }
+        //}
+        ////ciclo per i consumabili
+        //foreach (string consumable in currentSave.ConsumableID)
+        //{
+        //    //Se l'inventario è pieno non aggiungo nulla
+        //    if (!InventoryManager.Instance.CanAdd())
+        //    {
+        //        break;
+        //    }
+        //    //Cerco oggetto corrispondete a "consumable"
+        //    foreach (SO_ConsumableUpgrade consumableUpgrade in  consumableList )
+        //    {
+        //        if (consumableUpgrade.ID == consumable)
+        //        {
+        //            //Se trovato lo aggiungo
+        //            InventoryManager.Instance.AddConsumable(consumableUpgrade);
+        //            break;
+        //        }
+        //    }
+        //}
 
     }
 }

@@ -13,7 +13,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private List<SO_PassiveUpgrade> shopPassice;
     //Bottone dell'acquisto
     [SerializeField] private GameObject buyButton;
-    
+
     [SerializeField] private SaveManager saveManager;
 
 
@@ -21,7 +21,7 @@ public class ShopManager : MonoBehaviour
     //Funzione per acquistare
     public void BuyUpgrade(SO_UpgradeItems items)
     {
-        if (InventoryManager.Instance != null && InventoryManager.Instance.Coins < items.Cost)
+        if (InventoryManager.Instance != null && InventoryManager.Instance.saveData.Banana < items.Cost)
         {
             Debug.Log($"Soldi insufficenti");
             return;
@@ -34,7 +34,7 @@ public class ShopManager : MonoBehaviour
                 return;
             }
             
-            InventoryManager.Instance.Coins -= passive.Cost;
+            InventoryManager.Instance.saveData.Banana -= passive.Cost;
             passive.IsUnlocked = true;
             InventoryManager.Instance.AddPassive(passive);
             buyButton.SetActive(false);
@@ -48,11 +48,25 @@ public class ShopManager : MonoBehaviour
                 Debug.Log($"Inventario pieno");
                 return;
             }
-            InventoryManager.Instance.Coins -= consumable.Cost;
+            InventoryManager.Instance.saveData.Banana -= consumable.Cost;
             InventoryManager.Instance.AddConsumable(consumable);
             Debug.Log($"Consumabile aggiunto");
         }
-        //DEVO METTERCI IL SAVEDATA
-        saveManager.SaveGame();
+        
+        if (saveManager != null)
+                { 
+            saveManager.SaveGame();
+            Debug.Log("Non e nullo");
+        }//DEVO METTERCI IL SAVEDATA
+       
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            saveManager.Load();
+            Debug.Log("Loading");
+        }
     }
 }

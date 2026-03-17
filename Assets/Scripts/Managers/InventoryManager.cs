@@ -1,34 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class InventoryManager : Singleton<InventoryManager>
 {
-    private int coins;
-    public int Coins
-    { get => coins; set => coins = value;}
-    [SerializeField] private List<SO_PassiveUpgrade> _passives = new List<SO_PassiveUpgrade>();
-    [SerializeField] private List<SO_ConsumableUpgrade> _consumables = new List<SO_ConsumableUpgrade>();
+    //private int coins;
+    //public int Coins
+    //{ get => coins; set => coins = value;}
     private int _maxConsumables = 3;
-    //public SaveData saveData;
+    public SaveData saveData = new SaveData();
     public void AddPassive(SO_PassiveUpgrade upgrade)
     {
-        if (!_passives.Contains(upgrade))
+        //if (!_passives.Contains(upgrade))
+        //{
+            
+        //    _passives.Add(upgrade);
+        //    
+        //}
+        if (!saveData.PassiveID.Contains(upgrade))
         {
-            //saveData.Add
-            _passives.Add(upgrade);
-            Debug.Log($"[Inventario] {upgrade.name} aggiunto allo zaino");
+            saveData.PassiveID.Add(upgrade);
         }
+        Debug.Log($"[Inventario] {upgrade.name} aggiunto allo zaino");
+            
+
+            
     }
 
     public void AddConsumable(SO_ConsumableUpgrade upgrade)
     {
         
-        if (_consumables.Count < _maxConsumables)
+        if (saveData.ConsumableID.Count < _maxConsumables)
         {
-            //saveData.Add
-            _consumables.Add(upgrade);
-            Debug.Log($"[Inventario] {upgrade.name} aggiunto. Spazio : {_consumables.Count}/{_maxConsumables}");
+            saveData.ConsumableID.Add(upgrade);
+            Debug.Log($"[Inventario] {upgrade.name} aggiunto. Spazio : {saveData.ConsumableID.Count}/{_maxConsumables}");
         }
         else
         {
@@ -38,19 +44,19 @@ public class InventoryManager : Singleton<InventoryManager>
 
     public bool CanAdd()
     {
-        return _consumables.Count < _maxConsumables;
+        return saveData.ConsumableID.Count < _maxConsumables;
     }
 
     public bool HaveConsumable(SO_ConsumableUpgrade consumableUpgrade)
     {
-        return _consumables.Contains(consumableUpgrade);
+        return saveData.ConsumableID.Contains(consumableUpgrade);
     }
     public void UseUpgrade(SO_ConsumableUpgrade upgrade)
     {
-        if (_consumables.Contains(upgrade))
+        if (saveData != null && saveData.ConsumableID.Contains(upgrade))
         {
-            Debug.Log($"{upgrade.name} è stato utilizzato. Spazio : {_maxConsumables - _consumables.Count}");
-            _consumables.Remove(upgrade);
+            Debug.Log($"{upgrade.name} è stato utilizzato. Spazio : {_maxConsumables - saveData.ConsumableID.Count}");
+            saveData.ConsumableID.Remove(upgrade);
             upgrade.IsUnlocked = false;
         }
         

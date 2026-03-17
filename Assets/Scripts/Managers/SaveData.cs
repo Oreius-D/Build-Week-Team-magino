@@ -5,19 +5,19 @@ using UnityEngine;
 public class SaveData
 {
     [SerializeField] private int banana;
-    [SerializeField] private List<string> passiveID = new List<string>();
-    [SerializeField] private List<string> consumableID = new List<string>();
+    [SerializeField] private List<SO_PassiveUpgrade> passiveID = new List<SO_PassiveUpgrade>();
+    [SerializeField] private List<SO_ConsumableUpgrade> consumableID = new List<SO_ConsumableUpgrade>();
     public int Banana
     {
         get => banana;
         set => banana = value;
     }
-    public List<string> PassiveID
+    public List<SO_PassiveUpgrade> PassiveID
     {
         get => passiveID;
         set => passiveID = value;
     }
-    public List<string> ConsumableID
+    public List<SO_ConsumableUpgrade> ConsumableID
     {
         get => consumableID;
         set => consumableID = value;

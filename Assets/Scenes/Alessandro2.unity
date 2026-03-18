@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 78811832}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 9.6471195, z: -5.695956}
+  m_LocalPosition: {x: 0, y: 8.81712, z: -15.695956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -223,11 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007a36cfb0c76ae49831842b2f6e92c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: {fileID: 11400000, guid: 53a2e8b8ad7dba94787382eeefb64700, type: 2}
-  coin: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
-  lengthSection: 20
+  forestMap: {fileID: 11400000, guid: 6b51938665744ce4f87cea72fd95d0b5, type: 2}
+  coinPool: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
+  lengthSection: 50
   sectionOnScreen: 2
-  maxDistance: 100
+  maxDistance: 400
   vCam: {fileID: 78811833}
 --- !u!4 &423345019
 Transform:
@@ -718,7 +718,7 @@ Transform:
   m_GameObject: {fileID: 1490728375}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 9.6471195, z: -5.695956}
+  m_LocalPosition: {x: 0, y: 8.81712, z: -15.695956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -791,7 +791,7 @@ Transform:
   m_GameObject: {fileID: 1652978148}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.83, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

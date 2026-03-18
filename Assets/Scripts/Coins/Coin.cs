@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //do soldi al player
-            Debug.Log($"{coinData.Value} e suono {coinData.SoundId}");
+            //Debug.Log($"{coinData.Value} e suono {coinData.SoundId}");
            // AudioManager.Instance.PlaySound(coinData.SoundId);
         }
     }

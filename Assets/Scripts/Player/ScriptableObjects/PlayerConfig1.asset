@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 5
   laneChangeSpeed: 10
-  laneOffset: 2
+  laneOffset: 3
   jumpForce: 6
   gravity: -9.81
   groundedStickingForce: -5
-  slideDuration: 1
+  slideDuration: 1.5
   slideHeightMultiplier: 0.5
   slideCenterYMultiplier: 0.5
   invulnerabilityDuration: 2

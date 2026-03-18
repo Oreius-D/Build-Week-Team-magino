@@ -54,7 +54,6 @@ public class MapSpawnar : MonoBehaviour
         {
            // Segment segment = child.GetComponent<Segment>();
             PooledObject itemPool= child.GetComponentInChildren<PooledObject>();
-            Debug.Log(itemPool);
             if (itemPool!= null && child.gameObject.activeInHierarchy)
             {
                 Debug.Log("esiste Oggetto ed è attivo");

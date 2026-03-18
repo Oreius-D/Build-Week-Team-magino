@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolFrom: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
-  despawnDistance: 10
+  despawnDistance: 5
 --- !u!1001 &7234792612492687414
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2243,6 +2243,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 5404720626398094135, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b58d909bbea154da2b3ec7a67e596253,
+        type: 3}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9907363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1357999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -35.796997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18.109756
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532735508871509316, guid: e874a1ef8896c423093d1a6de1210838,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 15.61
+      objectReference: {fileID: 0}
     - target: {fileID: 8341046829164723742, guid: e874a1ef8896c423093d1a6de1210838,
         type: 3}
       propertyPath: m_Pivot.x

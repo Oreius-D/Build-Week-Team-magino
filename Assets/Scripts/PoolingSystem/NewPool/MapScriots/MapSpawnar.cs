@@ -57,7 +57,7 @@ public class MapSpawnar : MonoBehaviour
         //    SpawnPool(currentMap);
         //    isChanging = true;
         //}
-        ChangeMap(Pool.Instance.Player.position.z, ref currentMilestone, gapMilestone, moltiplicationGap);
+       // ChangeMap(Pool.Instance.Player.position.z, ref currentMilestone, gapMilestone, moltiplicationGap);
         if (Pool.Instance.Player.position.z >= maxDistance)
         {
             ResetMap();

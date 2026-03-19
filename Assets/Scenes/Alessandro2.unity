@@ -227,11 +227,11 @@ MonoBehaviour:
   desertMap: {fileID: 11400000, guid: 53a2e8b8ad7dba94787382eeefb64700, type: 2}
   coinPool: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
   lengthSection: 50
-  sectionOnScreen: 1
+  sectionOnScreen: 2
   currentMilestone: 100
   gapMilestone: 100
   moltiplicationGap: 1.5
-  maxDistance: 200
+  maxDistance: 400
   vCam: {fileID: 78811833}
 --- !u!4 &423345019
 Transform:

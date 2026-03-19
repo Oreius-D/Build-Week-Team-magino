@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb913f3c90a8b340acc91a326dc2386, type: 3}
   m_Name: TestMap
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: 1
   numPerPrefab: 5
   Prefabs:
   - {fileID: 5307547921801167297, guid: e4df482812aec7e4cab52cbf59b5861f, type: 3}

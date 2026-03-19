@@ -14,7 +14,6 @@ public class Pool : Singleton<Pool>
         {
             foreach(var prefab in poolSetting.Prefabs)
             {
-                Debug.Log(prefab);
                 var obj = Instantiate(prefab, transform);
                 obj.SetActive(false);
                 list.Add(obj);
@@ -27,26 +26,32 @@ public class Pool : Singleton<Pool>
     {
         if (pools.TryGetValue(poolType.Id, out List<GameObject> list))
         {
-            //Debug.Log(list.Count + "lista");
             int index = Random.Range(0, list.Count);
-            //Debug.Log(index + "index");
             var obj = list[index];
             obj.SetActive(true);
             list.RemoveAt(index);
             return obj;
         }
-        Debug.LogWarning($"Non ci sono ItemPool nella pool di questo tipo: {poolType.Id} ne creo degli altri");
+        Debug.LogWarning($"Non ci sono ItemPool nella pool di questo tipo: {poolType.Id}");
         return null;
     }
     public void ReturnToPool(PoolId id, GameObject obj)
     {
         if (pools.TryGetValue(id, out List<GameObject> list))
         {
-            //Debug.Log("sono stata richiamata ReturnToPool");
             obj.SetActive(false);
             list.Add(obj);
         }
 
+    }
+    public void DestroyPool(PoolId id)
+    {
+        if(pools.TryGetValue(id,out List<GameObject> list))
+        {
+            foreach (var obj in list) Destroy(obj);
+            list.Clear();
+            pools.Remove(id);
+        }
     }
 }
 

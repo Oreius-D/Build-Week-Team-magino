@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 8307489613103861271, guid: 5e6856ac5678cae43a4d5aca064eb599,
         type: 3}
       propertyPath: m_Center.z
-      value: 15
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

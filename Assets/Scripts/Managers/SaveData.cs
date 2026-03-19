@@ -7,6 +7,8 @@ public class SaveData
     [SerializeField] private int banana;
     [SerializeField] private List<SO_PassiveUpgrade> passiveID = new List<SO_PassiveUpgrade>();
     [SerializeField] private List<SO_ConsumableUpgrade> consumableID = new List<SO_ConsumableUpgrade>();
+
+    [SerializeField] private List<Scores> leaderBoard = new List<Scores>();
     public int Banana
     {
         get => banana;
@@ -22,4 +24,11 @@ public class SaveData
         get => consumableID;
         set => consumableID = value;
     }
+    
+    public List<Scores> LeaderBoard
+    {
+        get => leaderBoard;
+        set => leaderBoard = value;
+    }
+
 }

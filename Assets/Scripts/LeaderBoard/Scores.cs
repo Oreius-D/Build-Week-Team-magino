@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Scores
+public class Scores : MonoBehaviour
 {
-    [SerializeField] private string playerName;
-    [SerializeField] private int point;
+    private string playerName;
+    private int point;
 
-    public string PlayerName
-        { get => playerName;  set => playerName = value;  }
-    public int Point
-        { get => point; set => point = value; }
-
+    public string PlayerName 
+    {
+        get => playerName; set => playerName = value;
+    }
+    public int Point 
+    {
+        get => point; set => point = value;
+    }
 }

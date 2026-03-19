@@ -6,8 +6,9 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     private string path;
-    private List<SO_PassiveUpgrade> passiveList;
-    private List<SO_ConsumableUpgrade> consumableList;
+    [SerializeField] private int maxPlayerInLeaderboard = 5;
+    //private List<SO_PassiveUpgrade> passiveList;
+    //private List<SO_ConsumableUpgrade> consumableList;
     //private SaveData currentSave = new SaveData();
     private void Start()
     {
@@ -86,5 +87,19 @@ public class SaveManager : MonoBehaviour
         //    }
         //}
 
+    }
+    public void AddScore(string name, int score)
+    {
+        SaveData saveLeader = new SaveData();
+        //aggiungo il punteggio e nome personaggio
+        saveLeader.LeaderBoard.Add(new Scores { PlayerName = name, Point = score });
+        //ordino la lista , confronto la y con la x e diventa crescente
+        saveLeader.LeaderBoard.Sort((x, y) => y.Point.CompareTo(x.Point));
+        // metto un massimo di player in lista, tipo TOP. es i migliori 5 vengono registrari
+        if (saveLeader.LeaderBoard.Count > maxPlayerInLeaderboard)
+        {
+            saveLeader.LeaderBoard.RemoveAt(maxPlayerInLeaderboard);
+        }
+        SaveGame();
     }
 }

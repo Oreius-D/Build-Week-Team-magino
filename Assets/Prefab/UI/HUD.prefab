@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2925588215231466129}
   - component: {fileID: 8562690922553630745}
   - component: {fileID: 1048720737169849078}
+  - component: {fileID: 3474767217432170742}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3474767217432170742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898947008487803902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6546033543d154d63ab8a0bb3156773f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runCurrency: {fileID: 0}
+  coinText: {fileID: 5992906956873597829}
 --- !u!1 &1827083701726908403
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +178,7 @@ GameObject:
   - component: {fileID: 8453767986031665804}
   - component: {fileID: 6829710003219649210}
   - component: {fileID: 9184338587653797608}
+  - component: {fileID: 2707621159044729356}
   m_Layer: 5
   m_Name: LifeBar
   m_TagString: Untagged
@@ -230,6 +246,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2707621159044729356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091906882412737663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0d1a70ab3224e8ead425dcb92da344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 8167678797482422994}
+  - {fileID: 8385678937248236073}
+  - {fileID: 2684892465144160150}
+  fullHeart: {fileID: 1596636647, guid: a5e645d0b2507ac42807ef8e886f7d45, type: 3}
+  emptyHeart: {fileID: -1095917349, guid: a5e645d0b2507ac42807ef8e886f7d45, type: 3}
+  playerHealth: {fileID: 0}
 --- !u!1 &3445791481749122331
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +352,7 @@ GameObject:
   - component: {fileID: 3032608155148551474}
   - component: {fileID: 5992906956873597829}
   m_Layer: 5
-  m_Name: Amount
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,7 +589,7 @@ GameObject:
   - component: {fileID: 4550671340533272727}
   - component: {fileID: 5404720626398094135}
   m_Layer: 5
-  m_Name: Money
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

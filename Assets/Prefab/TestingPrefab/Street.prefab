@@ -56,7 +56,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 7, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 50}
 --- !u!114 &2592794184159264028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolFrom: {fileID: 11400000, guid: 53a2e8b8ad7dba94787382eeefb64700, type: 2}
-  despawnDistance: 20
+  despawnDistance: 35
 --- !u!114 &462459809626253250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ea360ba9967c74ebcd150428980d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lanePoints: {fileID: 2625216921027913217}
+  coinPoints: []
+  coinPool: {fileID: 0}
   numCoins: 3
   offsetCoin: 3
 --- !u!1 &6597026617505227953
@@ -115,7 +116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9, y: 0.3, z: 20}
+  m_LocalScale: {x: 9, y: 0.3, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5929296093953336692}

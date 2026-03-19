@@ -15,6 +15,7 @@ public class InventoryManagerAdapter : MonoBehaviour ,IPlayerInventory
         manager = InventoryManager.Instance;//collego l'istanza
         Debug.Log(manager);
         runCurrency.OnCoinsChanged += AddRunCoins;
+
     }
 
     private void OnDisable()

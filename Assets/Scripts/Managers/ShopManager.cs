@@ -54,19 +54,19 @@ public class ShopManager : MonoBehaviour
         }
         
         if (saveManager != null)
-                { 
+        { 
             saveManager.SaveGame();
             Debug.Log("Non e nullo");
-        }//DEVO METTERCI IL SAVEDATA
+        }
        
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            saveManager.Load();
-            Debug.Log("Loading");
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.G))
+    //    {
+    //        saveManager.Load();
+    //        Debug.Log("Loading");
+    //    }
+    //}
 }

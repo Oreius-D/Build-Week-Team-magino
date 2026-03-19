@@ -7,7 +7,7 @@ using UnityEngine;
 public class MapSpawnar : MonoBehaviour
 {
     private float lastdistance = 0f;
-   [SerializeField] private float totalDistance = 0f;
+    [SerializeField] private float totalDistance = 0f;
     [Header("TypeMap")]
     [SerializeField] private PoolSettings[] maps;
 

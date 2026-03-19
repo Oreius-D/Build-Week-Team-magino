@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb913f3c90a8b340acc91a326dc2386, type: 3}
+  m_Name: ForestMap
+  m_EditorClassIdentifier: 
+  Id: 0
+  numPerPrefab: 2
+  Prefabs:
+  - {fileID: 1537825779715694883, guid: 19919cd250a02ac409a8bbb975fbbd04, type: 3}
+  - {fileID: 5183580927152738922, guid: ae4d3d55b8ce1db44b9c404c8fe75ae0, type: 3}
+  - {fileID: 8008460496138807784, guid: 9747c2ab1159be24ca0fc7ea7a3bef73, type: 3}
+  - {fileID: 5460024740211877104, guid: c5997ccf269b3aa4788df3bc6cb97da4, type: 3}
+  - {fileID: 596866603978997234, guid: 7e0f063635af1a14a8034a77c419469b, type: 3}

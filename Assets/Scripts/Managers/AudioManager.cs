@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : Singleton<AudioManager>
@@ -23,6 +24,17 @@ public class AudioManager : Singleton<AudioManager>
         {
             audioSource.clip = GetRandomClip(clips);
             audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning($"non ci sono Clips con L'Id: {id} ");
+        }
+    }
+    public void PlaySound(SoundID id)
+    {
+        if (audioDatabase.TryGetValue(id, out AudioClip[] clips))
+        {
+            audioSource.PlayOneShot(GetRandomClip(clips));
         }
         else
         {

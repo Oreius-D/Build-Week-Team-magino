@@ -90,7 +90,7 @@ public class SaveManager : MonoBehaviour
     }
     public void AddScore(string name, int score)
     {
-        SaveData saveLeader = new SaveData();
+        SaveData saveLeader = InventoryManager.Instance.saveData;
         //aggiungo il punteggio e nome personaggio
         saveLeader.LeaderBoard.Add(new Scores { PlayerName = name, Point = score });
         //ordino la lista , confronto la y con la x e diventa crescente

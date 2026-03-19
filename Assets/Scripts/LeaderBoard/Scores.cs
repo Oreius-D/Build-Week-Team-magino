@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scores : MonoBehaviour
+[System.Serializable]
+public class Scores
 {
     private string playerName;
     private int point;

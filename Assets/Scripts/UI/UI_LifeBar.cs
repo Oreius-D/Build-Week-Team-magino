@@ -1,23 +1,46 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_LifeBar : MonoBehaviour
 {
     [SerializeField] private Image[] hearts;
+    [SerializeField] private Sprite fullHeart;
+    [SerializeField] private Sprite emptyHeart;
+    [SerializeField] private PlayerHealth playerHealth;
 
-    private Sprite fullHeart;
-    private Sprite emptyHeart;
+    void Start()
+    {
+        if (playerHealth == null) playerHealth = FindObjectOfType<PlayerHealth>();
+        playerHealth.OnHit += OnPlayerHit;
+        UpdateHeartsGraphics(playerHealth.HitsLeft);
+    }
 
-    
-    public void UpdateHeartsGraphics()
+    public void OnPlayerHit(int hitsLeft)
+    {
+        UpdateHeartsGraphics(hitsLeft);
+    }
+
+    public void UpdateHeartsGraphics(int currentHealth)
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            //if (i<)
+            if (hearts[i] == null) return;
+
+            if (i < currentHealth)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
+
         }
     }
 
-    //Action<int> OnHit
-    //PlayerHealth.OnHit += mia funzione senza parentesi
+    void OnDestroy()
+    {
+        if (playerHealth != null)
+            playerHealth.OnHit -= OnPlayerHit;
+    }
 }

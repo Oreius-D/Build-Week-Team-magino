@@ -7,12 +7,19 @@ public class InventoryManagerAdapter : MonoBehaviour ,IPlayerInventory
     private InventoryManager manager;// riferimento a inventorymanager
 
     public int RunCoins => manager.coins;//metto le monete del manager con interfaccia
+    [SerializeField] private RunCurrency runCurrency;
 
     
     private void Start()
     {
         manager = InventoryManager.Instance;//collego l'istanza
         Debug.Log(manager);
+        runCurrency.OnCoinsChanged += AddRunCoins;
+    }
+
+    private void OnDisable()
+    {
+        runCurrency.OnCoinsChanged -= AddRunCoins;
     }
     public bool TryUseConsumable(int slotIndex)
     {

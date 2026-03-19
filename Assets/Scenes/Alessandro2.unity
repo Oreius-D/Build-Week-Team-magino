@@ -223,15 +223,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007a36cfb0c76ae49831842b2f6e92c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forestMap: {fileID: 11400000, guid: 6b51938665744ce4f87cea72fd95d0b5, type: 2}
-  desertMap: {fileID: 11400000, guid: 53a2e8b8ad7dba94787382eeefb64700, type: 2}
+  totalDistance: 0
+  maps:
+  - {fileID: 11400000, guid: 53a2e8b8ad7dba94787382eeefb64700, type: 2}
+  - {fileID: 11400000, guid: c2d4fb53f0c514b45a99c8253dc8f24c, type: 2}
+  - {fileID: 11400000, guid: 6b51938665744ce4f87cea72fd95d0b5, type: 2}
   coinPool: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
   lengthSection: 50
   sectionOnScreen: 2
   currentMilestone: 100
   gapMilestone: 100
-  moltiplicationGap: 1.5
-  maxDistance: 400
+  maxDistance: 200
   vCam: {fileID: 78811833}
 --- !u!4 &423345019
 Transform:

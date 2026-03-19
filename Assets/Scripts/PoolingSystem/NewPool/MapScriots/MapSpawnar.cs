@@ -56,14 +56,9 @@ public class MapSpawnar : MonoBehaviour
         {
             ActiveSection();
         }
-        //if (Pool.Instance.Player.position.z >= 100 && !isChanging)
-        //{
-        //    previusMap= currentMap;
-        //    currentMap = desertMap;
-        //    SpawnPool(currentMap);
-        //    isChanging = true;
-        //}
+
         ChangeMap(totalDistance, ref currentMilestone, gapMilestone);
+
         if (Pool.Instance.Player.position.z >= maxDistance)
         {
             ResetMap();
@@ -98,14 +93,8 @@ public class MapSpawnar : MonoBehaviour
             }
         }
 
-        // DestroyMap();
         spawnZMap -=offsetZ;
         ResetPlayer();
-
-        //for (int i = 0; i < sectionOnScreen; i++)
-        //{
-        //    ActiveSection();
-        //}
     }
     private void WarpCam(Vector3 newPostion, Vector3 oldPosition)
     {
@@ -130,7 +119,6 @@ public class MapSpawnar : MonoBehaviour
     }
     public void ChangeMap(float distanceTravelled, ref float milestone, float nextGap)
     {
-        // Debug.Log(milestone+"ogni volta che entra nella funziona");
         if (distanceTravelled >= milestone)
         {
             currentIndexMap = (currentIndexMap + 1) % maps.Length;

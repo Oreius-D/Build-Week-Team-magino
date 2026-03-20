@@ -34,6 +34,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void Play()
+    {
+        Invoke(nameof(DelayPlayGame), 1);
+
+    }
+
+    public void DelayPlayGame()
+    {
+        //AudioManager.Instance.PlaySound(buttonSoundID);
+        SceneManager.LoadScene("MainGame");
+    }
     public void Retry()
     {
         Invoke(nameof(DelayRetry), 1);

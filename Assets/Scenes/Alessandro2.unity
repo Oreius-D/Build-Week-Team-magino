@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalDistance: 0
   maps:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6b51938665744ce4f87cea72fd95d0b5, type: 2}
   - {fileID: 11400000, guid: f3e65fc83a38b0149a113004ad1c26b9, type: 2}
   - {fileID: 11400000, guid: 21a9cc2611d71874ca278f929f7bfaa6, type: 2}
   coinPool: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}

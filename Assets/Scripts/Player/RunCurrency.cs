@@ -20,7 +20,7 @@ public class RunCurrency : MonoBehaviour
     {
         if (amount <= 0) return;
         coins += amount;
-        Debug.Log($"Coins: {coins}");
+        //Debug.Log($"Coins: {coins}");
         OnCoinsChanged?.Invoke(coins);
     }
 

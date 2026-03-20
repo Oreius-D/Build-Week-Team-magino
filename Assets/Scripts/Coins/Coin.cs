@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] SO_CoinData coinData;
+    [SerializeField] SoundID idSound;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //do soldi al player
-            //Debug.Log($"{coinData.Value} e suono {coinData.SoundId}");
-           // AudioManager.Instance.PlaySound(coinData.SoundId);
+           AudioManager.Instance.PlaySound(idSound);
         }
     }
 }

@@ -3,4 +3,4 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SoundID { Music, Coin }
-public enum PoolId {MapForest, MapDesert,MapIce, Coin}
+public enum PoolId {MapForest, MapDesert,MapCity, Coin}

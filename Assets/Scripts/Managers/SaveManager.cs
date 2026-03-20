@@ -88,11 +88,13 @@ public class SaveManager : MonoBehaviour
         //}
 
     }
-    public void AddScore(string name, int score)
+    public void AddScore()
     {
         SaveData saveLeader = InventoryManager.Instance.saveData;
+        int currentScore = Mathf.FloorToInt(Pool.Instance.Player.position.z);
+        string playerName = "Player" + (saveLeader.LeaderBoard.Count + 1);
         //aggiungo il punteggio e nome personaggio
-        saveLeader.LeaderBoard.Add(new Scores { PlayerName = name, Point = score });
+        saveLeader.LeaderBoard.Add(new Scores { PlayerName = playerName, Point = currentScore });
         //ordino la lista , confronto la y con la x e diventa crescente
         saveLeader.LeaderBoard.Sort((x, y) => y.Point.CompareTo(x.Point));
         // metto un massimo di player in lista, tipo TOP. es i migliori 5 vengono registrari

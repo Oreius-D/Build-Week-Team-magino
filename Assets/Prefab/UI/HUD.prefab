@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6546033543d154d63ab8a0bb3156773f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runCurrency: {fileID: 0}
+  playerCurrency: {fileID: 0}
   coinText: {fileID: 5992906956873597829}
 --- !u!1 &1827083701726908403
 GameObject:
@@ -602,16 +602,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8019859776064889761}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.1357999, w: 0.9907363}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2925588215231466129}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.61}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: 5}
+  m_AnchoredPosition: {x: -35.796997, y: 18.109756}
   m_SizeDelta: {x: 97.4409, y: 101.0948}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &4550671340533272727
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1136330797, guid: a5e645d0b2507ac42807ef8e886f7d45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b58d909bbea154da2b3ec7a67e596253, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

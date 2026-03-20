@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
         // Imposta il tempo di invulnerabilità dopo aver subito un hit
         invulnUntil = Time.time + Mathf.Max(0f, invulnDuration);
 
-        Debug.Log($"Player took hit: damage={damage}, hitsLeft={hitsLeft}, invulnerableUntil={invulnUntil}");
+        //Debug.Log($"Player took hit: damage={damage}, hitsLeft={hitsLeft}, invulnerableUntil={invulnUntil}");
 
         // Se gli hit rimanenti sono 0, il giocatore è morto
         // Importante: usare <= evita casi limite (es. danno > hits rimasti, o costanti non int).

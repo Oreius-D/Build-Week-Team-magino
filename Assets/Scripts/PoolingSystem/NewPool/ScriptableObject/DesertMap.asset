@@ -16,4 +16,7 @@ MonoBehaviour:
   numPerPrefab: 2
   Prefabs:
   - {fileID: 1760911009270286672, guid: b45fb57d1483ccc4399133ad91d52e85, type: 3}
-  - {fileID: 0}
+  - {fileID: 2431042749112005538, guid: 8d16c009456dfcd47a3c95a3c4966419, type: 3}
+  - {fileID: 6989697248588782758, guid: 3bcc7c0356132ec46868fd7b2d12edd4, type: 3}
+  - {fileID: 6635961183981825172, guid: a9a76579319c8f643866a78e220683ee, type: 3}
+  - {fileID: 2416982274405750306, guid: 8b04af14d19002c41a9bc7b1bafcc185, type: 3}

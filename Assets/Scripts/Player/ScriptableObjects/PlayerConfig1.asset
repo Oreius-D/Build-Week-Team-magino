@@ -18,7 +18,7 @@ MonoBehaviour:
   jumpForce: 6
   gravity: -9.81
   groundedStickingForce: -5
-  slideDuration: 1.5
+  slideDuration: 1
   slideHeightMultiplier: 0.5
   slideCenterYMultiplier: 0.5
   invulnerabilityDuration: 2

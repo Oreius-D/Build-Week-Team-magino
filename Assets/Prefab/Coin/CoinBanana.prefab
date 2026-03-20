@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1447699916705196047}
   - component: {fileID: 4135247441440749770}
   - component: {fileID: 6577860730180962573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CoinBanana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,10 +141,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: bec2cfd0594f64e1fa982f1be8fff5a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1354622732140865770, guid: bec2cfd0594f64e1fa982f1be8fff5a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bec2cfd0594f64e1fa982f1be8fff5a9,
         type: 3}
       propertyPath: m_Name
       value: Banana
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bec2cfd0594f64e1fa982f1be8fff5a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426669532271018066, guid: bec2cfd0594f64e1fa982f1be8fff5a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

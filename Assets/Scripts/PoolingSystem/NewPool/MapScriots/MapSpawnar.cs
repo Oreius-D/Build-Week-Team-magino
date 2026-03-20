@@ -15,7 +15,6 @@ public class MapSpawnar : MonoBehaviour
     private PoolSettings currentMap;
     private PoolSettings previusMap;
     private int currentIndexMap = 0;
-    private bool isChanging = false;
 
     [SerializeField] private PoolSettings coinPool;
 
@@ -81,15 +80,9 @@ public class MapSpawnar : MonoBehaviour
         float offsetZ = Pool.Instance.Player.position.z - spawnZPlayer;
         foreach (Transform child in Pool.Instance.transform)
         {
-            //PooledObject itemPool = child.GetComponent<PooledObject>();
-            //if (itemPool != null && child.gameObject.activeInHierarchy)
-            //{
-            //    Pool.Instance.ReturnToPool(itemPool.PoolFrom.Id, child.gameObject);
-            //}
-            PooledObject itemPool = child.GetComponent<PooledObject>();
-            if (itemPool != null && child.gameObject.activeInHierarchy)
+            if (child.gameObject.activeInHierarchy)
             {
-                itemPool.transform.position = new Vector3(itemPool.transform.position.x, itemPool.transform.position.y, itemPool.transform.position.z-offsetZ);
+                child.position = new Vector3(child.position.x, child.position.y, child.position.z-offsetZ);
             }
         }
 
@@ -122,21 +115,10 @@ public class MapSpawnar : MonoBehaviour
         if (distanceTravelled >= milestone)
         {
             currentIndexMap = (currentIndexMap + 1) % maps.Length;
-            previusMap = currentMap;
+            //previusMap = currentMap;
             currentMap = maps[currentIndexMap];
-
-            isChanging = true;
             milestone += nextGap;
 
         }
     }
-    //private void DestroyMap()
-    //{
-    //    if (isChanging && previusMap != null)
-    //    {
-    //        isChanging = false;
-    //        Pool.Instance.DestroyPool(previusMap.Id);
-    //        previusMap = null;
-    //    }
-    //}
 }

@@ -9,7 +9,7 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           AudioManager.Instance.PlaySound(idSound);
+           //AudioManager.Instance.PlaySound(idSound);
         }
     }
 }

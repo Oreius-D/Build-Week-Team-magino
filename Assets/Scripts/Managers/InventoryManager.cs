@@ -9,7 +9,6 @@ public class InventoryManager : Singleton<InventoryManager>
     //public int Coins
     //{ get => coins; set => coins = value;}
     public int coins;
-   
 
     private int _maxConsumables = 3;
     public SaveData saveData = new SaveData();
@@ -25,10 +24,7 @@ public class InventoryManager : Singleton<InventoryManager>
         {
             saveData.PassiveID.Add(upgrade);
         }
-        Debug.Log($"[Inventario] {upgrade.name} aggiunto allo zaino");
-            
-
-            
+        Debug.Log($"[Inventario] {upgrade.name} aggiunto allo zaino");            
     }
 
     public void AddConsumable(SO_ConsumableUpgrade upgrade)

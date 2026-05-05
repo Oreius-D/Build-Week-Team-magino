@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1deaf7357c8944e7c8a6b51216e33137
+  - enabled: 1
+    path: Assets/Scenes/Alessandro2.unity
+    guid: 7972aa0dda362ac47a79cc2a11ea4fd4
   m_configObjects: {}

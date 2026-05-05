@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     {
         Invoke(nameof(DelayGameOver), 1);
     }
-
     public void DelayGameOver()
     {
         _onGameOver?.Invoke();
@@ -42,8 +41,8 @@ public class GameManager : MonoBehaviour
 
     public void DelayPlayGame()
     {
-        //AudioManager.Instance.PlaySound(buttonSoundID);
-        SceneManager.LoadScene("MainGame");
+        AudioManager.Instance.PlaySound(buttonSoundID);
+        SceneManager.LoadScene("Alessandro2");
     }
     public void Retry()
     {

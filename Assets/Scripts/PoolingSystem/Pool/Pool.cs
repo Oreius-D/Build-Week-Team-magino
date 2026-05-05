@@ -54,15 +54,3 @@ public class Pool : Singleton<Pool>
         }
     }
 }
-
-//public void CreatePool(PoolSettings poolSetting)
-//{
-//    //var list = new List<GameObject>();
-//    //for (int i = 0; i < poolSetting.DefaultSize; i++)
-//    //{
-//    //    var obj = Instantiate(poolSetting.Prefab, transform);
-//    //    obj.SetActive(false);
-//    //    list.Add(obj);
-//    //}    
-//    //pools.Add(poolSetting.Id, list);
-//}

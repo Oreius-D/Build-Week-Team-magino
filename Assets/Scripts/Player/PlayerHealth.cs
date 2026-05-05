@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
         // Notifica gli ascoltatori del nuovo numero di hit rimanenti
         OnHit?.Invoke(hitsLeft);
         playerAnimator.Hit();
+        AudioManager.Instance.PlaySound(SoundID.Hit);
 
         // Imposta il tempo di invulnerabilità dopo aver subito un hit
         invulnUntil = Time.time + Mathf.Max(0f, invulnDuration);

@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalDistance: 0
   maps:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6b51938665744ce4f87cea72fd95d0b5, type: 2}
   - {fileID: 11400000, guid: f3e65fc83a38b0149a113004ad1c26b9, type: 2}
   - {fileID: 11400000, guid: 21a9cc2611d71874ca278f929f7bfaa6, type: 2}
   coinPool: {fileID: 11400000, guid: cac5aae36bf8421449a15a3e27820122, type: 2}
@@ -759,6 +759,12 @@ MonoBehaviour:
   - SoundID: 3
     Clips:
     - {fileID: 8300000, guid: 9c81708937d7b400f94950a59f4ca6bb, type: 3}
+  - SoundID: 4
+    Clips:
+    - {fileID: 8300000, guid: 9236d80588ae8cb409cdca0e8ec228fd, type: 3}
+  - SoundID: 5
+    Clips:
+    - {fileID: 8300000, guid: 0f34c414aaa157144813246de480157f, type: 3}
 --- !u!82 &1594056393
 AudioSource:
   m_ObjectHideFlags: 0

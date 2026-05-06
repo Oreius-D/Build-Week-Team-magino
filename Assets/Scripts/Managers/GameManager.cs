@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _onGameOver;
-    [SerializeField] private UnityEvent _onWin;
+    //[SerializeField] private UnityEvent _onGameOver;
+    //[SerializeField] private UnityEvent _onWin;
 
     [SerializeField] SoundID buttonSoundID;
     [SerializeField] SoundID musicID;
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     }
     public void DelayGameOver()
     {
-        _onGameOver?.Invoke();
+       // _onGameOver?.Invoke();
         AudioManager.Instance.PlayMusic(musicID);
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public event Action<int> OnHit;   // Hit rimanenti, utile per aggiornare UI o triggerare effetti
-    public event Action OnDied;       // Il giocatore è morto, utile per gestire game over o respawn
+    public static event Action OnDied;       // Il giocatore è morto, utile per gestire game over o respawn
 
     [SerializeField] private int maxHits = 3; // Numero di hit che il giocatore può subire prima di morire
 

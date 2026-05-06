@@ -6,7 +6,7 @@ public class Pool : Singleton<Pool>
 {
     Dictionary<PoolId, List<GameObject>> pools = new Dictionary<PoolId, List<GameObject>>();
     [SerializeField] public Transform Player;
-
+    protected override bool ShouldBeDestoyOnLoad() => true;
     public void CreatePool(PoolSettings poolSetting)
     {
         var list = new List<GameObject>();

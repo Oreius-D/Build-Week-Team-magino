@@ -2,23 +2,25 @@ using UnityEngine;
 
 public class PlayerRunEndBridge : MonoBehaviour
 {
-    private PlayerHealth health;
+    //private PlayerHealth health;
     private RunCurrency runCurrency;
 
     private void Awake()
     {
-        health = GetComponent<PlayerHealth>();
+        //health = GetComponent<PlayerHealth>();
         runCurrency = GetComponent<RunCurrency>();
     }
 
     private void OnEnable()
     {
-        if (health != null) health.OnDied += HandleDied;
+        // if (health != null) health.OnDied += HandleDied;
+        PlayerHealth.OnDied += HandleDied;
     }
 
     private void OnDisable()
     {
-        if (health != null) health.OnDied -= HandleDied;
+        //if (health != null) health.OnDied -= HandleDied;
+        PlayerHealth.OnDied -= HandleDied;
     }
 
     private void HandleDied()

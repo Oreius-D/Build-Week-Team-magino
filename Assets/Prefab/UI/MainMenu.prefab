@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5769248142068485300}
   - component: {fileID: 3201373100257211365}
   - component: {fileID: 5869628190473505675}
+  - component: {fileID: 4869787752836249236}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -102,6 +103,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4869787752836249236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918113752862226512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b249b7a71aeb2a45adc495fdbafaec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4600593321346742812
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,12 +569,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
